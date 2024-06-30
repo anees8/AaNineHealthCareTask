@@ -55,4 +55,18 @@ abstract class BaseController extends Controller
 
         // E.g.: $this->session = \Config\Services::session();
     }
+
+    protected function isLoggedIn()
+    {
+        // Check if user is logged in
+        // Example: Implement your authentication check logic here
+        // You may have a session variable or some other way to check if user is authenticated
+        // For illustration purpose, let's assume you have a session variable named 'isLoggedIn'
+
+        if (session()->get('isLoggedIn')) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
